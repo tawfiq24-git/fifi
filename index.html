@@ -4,40 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AuraVibe | Login</title>
-    <link rel="stylesheet" href="/fifi/login.css">
-    <link rel="icon" href="/fifi/Images/Logo.png">
+    <link rel="stylesheet" href="login.css">
+    <link rel="icon" href="Images/Logo.png">
 </head>
 
 <body>
+    <div class="background" aria-hidden="true"></div>
 
-    <!-- Background container -->
-    <div class="background"></div>
+    <a class="brand-mark" href="index.html" aria-label="Aura Vibes home">
+        <img src="Images/Logo.png" alt="">
+        <span>Aura Vibes</span>
+    </a>
 
-    <!--Mode Button-->
-   <div class="toggle" id="themeToggle">
-  <div class="circle">
-    <span id="toggleIcon"class="sun">☀</span>
-  </div>
-</div>
-<div class="login-card">
-  <h2 class="gradient-text">Let's Vibe Again!</h2>
+    <button class="toggle" id="themeToggle" type="button" aria-label="Toggle theme">
+        <span class="circle">
+            <span id="toggleIcon" class="sun">☀</span>
+        </span>
+    </button>
 
-  <input type="text" placeholder="Username/Email">
-  <input type="password"  placeholder="Password">
+    <main class="login-card">
+        <h1 class="gradient-text">Let&apos;s Vibe Again!</h1>
+        <form id="loginForm" action="home.html" method="get">
+            <label class="sr-only" for="username">Username or Email</label>
+            <input id="username" type="text" placeholder="Username/Email" autocomplete="username" required>
 
-  <a href="/fifi/home.html"><button class="login">Login</button></a>
+            <label class="sr-only" for="password">Password</label>
+            <input id="password" type="password" placeholder="Password" autocomplete="current-password" required>
 
-<p class="Signup">Don’t have an account? <a href="#">Sign Up</a> Using
-</p>
-<div class="social-login">
-  <button class="google-btn"><img src="/fifi/Images/Google Icon.png" class="icon1">Sign up with Google</button>
-  <button class="facebook-btn"> <img src="/fifi/Images/Facebook Logo.png" class="icon2">Sign up with Facebook</button>
-</div>
-<img src="/fifi/Images/AV-removebg-preview.png" class="bottom-logo">
-</div>
+            <button id="loginButton" class="login" type="submit" disabled>Login</button>
+        </form>
 
-    
+        <p class="signup">Don&apos;t have an account? <a href="#">Sign Up</a> using</p>
 
-<script src="/fifi/login.js"></script>
+        <div class="social-login">
+            <button class="google-btn" type="button">
+                <img src="Images/Google Icon.png" class="icon1" alt="">
+                Sign up with Google
+            </button>
+            <button class="facebook-btn" type="button">
+                <img src="Images/Facebook Logo.png" class="icon2" alt="">
+                Sign up with Facebook
+            </button>
+        </div>
+
+        <img src="Images/AV-removebg-preview.png" class="bottom-logo" alt="AuraVibe logo">
+    </main>
+
+    <script src="login.js"></script>
 </body>
 </html>
