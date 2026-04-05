@@ -354,6 +354,15 @@ transform:scale(1.2);
 position:relative;
 z-index:10;
 }
+.ad-banner {
+    background: linear-gradient(90deg, #6a5acd, #ff69b4);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+    margin: 15px;
+    border-radius: 10px;
+}
 
 .card{
 position:relative;
