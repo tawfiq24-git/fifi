@@ -7,6 +7,12 @@ box-sizing:border-box;
 font-family:Arial, sans-serif;
 }
 
+body{
+background:linear-gradient(135deg,#e0e7ff,#c7d2fe,#ddd6fe);
+color:#111827;
+min-height:100vh;
+}
+
 
 /* NAVBAR */
 
@@ -57,43 +63,6 @@ box-shadow:0 0 10px #a78bfa, 0 0 25px #a78bfa;
 
 
 /* HERO SECTION (AURA GRADIENT) */
-.hero{
-height:45vh;
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-flex-direction:column;
-
-background:linear-gradient(120deg,#5f72bd,#9b23ea,#00c6ff);
-background-size:300% 300%;
-animation:auraMove 10s ease infinite;
-
-color:white;
-position:relative;
-overflow:hidden;
-}
-.hero h1{
-font-size:48px;
-font-weight:bold;
-letter-spacing:1px;
-
-text-shadow:
-0 0 8px #ffffff,
-0 0 18px #c084fc,
-0 0 35px #60a5fa;
-
-animation:floatText 3s ease-in-out infinite;
-}
-
-@keyframes floatText{
-0%{transform:translateY(0);}
-50%{transform:translateY(-6px);}
-100%{transform:translateY(0);}
-}
-
-/* moving gradient animation */
-
 @keyframes auraMove{
 0%{background-position:0% 50%;}
 50%{background-position:100% 50%;}
@@ -162,40 +131,6 @@ box-shadow:
 .love {background:linear-gradient(135deg,#db2777,#f472b6);}
 .energetic {background:linear-gradient(135deg,#2563eb,#60a5fa);}
 .focus {background:linear-gradient(135deg,#4c1d95,#7c3aed);}
-body{
-background:linear-gradient(135deg,#eef2ff,#e0e7ff,#f5f3ff);
-min-height:100vh;
-}
-.hero p{
-margin-top:10px;
-font-size:20px;
-opacity:0.95;
-
-background:rgba(255,255,255,0.15);
-padding:8px 18px;
-border-radius:20px;
-backdrop-filter:blur(6px);
-
-animation:fadeGlow 2.5s ease-in-out infinite alternate;
-}
-
-@keyframes fadeGlow{
-from{opacity:0.7;}
-to{opacity:1;}
-}
-.hero::after{
-content:"✨";
-position:absolute;
-font-size:120px;
-opacity:0.08;
-animation:pulseSpark 4s infinite ease-in-out;
-}
-
-@keyframes pulseSpark{
-0%{transform:scale(1);}
-50%{transform:scale(1.4);}
-100%{transform:scale(1);}
-}
 .container h2{
 font-size:32px;
 color:white;
@@ -203,10 +138,6 @@ color:white;
 text-shadow:
 0 0 8px #a78bfa,
 0 0 18px #60a5fa;
-}
-body{
-background:linear-gradient(135deg,#e0e7ff,#c7d2fe,#ddd6fe);
-color:#111827;
 }
 .container{
 background:transparent;
@@ -249,6 +180,12 @@ text-align:center;
 
 padding:60px 20px;
 width:100%;
+background:linear-gradient(120deg,#5f72bd,#9b23ea,#00c6ff);
+background-size:300% 300%;
+animation:auraMove 10s ease infinite;
+color:white;
+position:relative;
+overflow:hidden;
 }
 .hero-center h1{
 font-size:48px;
@@ -354,15 +291,6 @@ transform:scale(1.2);
 position:relative;
 z-index:10;
 }
-.ad-banner {
-    background: linear-gradient(90deg, #6a5acd, #ff69b4);
-    color: white;
-    text-align: center;
-    padding: 10px;
-    font-size: 18px;
-    margin: 15px;
-    border-radius: 10px;
-}
 
 .card{
 position:relative;
@@ -374,12 +302,16 @@ position:relative;
 z-index:1;
 }
 
-.popup {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #222;
-    color: white;
-    padding: 15px;
-    border-radius: 12px;
+.hero-layout::after{
+content:"✨";
+position:absolute;
+font-size:120px;
+opacity:0.08;
+animation:pulseSpark 4s infinite ease-in-out;
+}
+
+@keyframes pulseSpark{
+0%{transform:scale(1);}
+50%{transform:scale(1.4);}
+100%{transform:scale(1);}
 }
