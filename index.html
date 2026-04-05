@@ -1,115 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aura Vibes</title>
-
-<link rel="stylesheet" href="style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AuraVibe | Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Images/Logo.png">
 </head>
 
 <body>
 
+    <!-- Background container -->
+    <div class="background"></div>
 
-<!-- NAVBAR -->
-
-<div class="navbar">
-
-<div class="nav-left"></div>
-
-<h2 class="logo">Aura Vibes 🎶</h2>
-
-<div class="nav-right">
-<a href="home.html">Home</a>
-<a href="login.html">Logout</a>
+    <!--Mode Button-->
+   <div class="toggle" id="themeToggle">
+  <div class="circle">
+    <span id="toggleIcon"class="sun">☀</span>
+  </div>
 </div>
+<div class="login-card">
+  <h2 class="gradient-text">Let's Vibe Again!</h2>
 
-</div>
+  <input type="text" placeholder="Username/Email">
+  <input type="password"  placeholder="Password">
 
+  <button class="login">Login</button>
 
-
-<!-- HERO SECTION -->
-
-<div class="hero-layout">
-
-
-
-
-
-<!-- CENTER CONTENT -->
-
-<div class="hero-center">
-
-<h1>Select Your Mood 🎵</h1>
-
-<p class="subtitle">
-Get music recommendations based on your emotions
+<p class="Signup">Don’t have an account? <a href="#">Sign Up</a> Using
 </p>
-
-
-<div class="equalizer">
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
+<div class="social-login">
+  <button class="google-btn"><img src="Images/Google Icon.png" class="icon1">Sign up with Google</button>
+  <button class="facebook-btn"> <img src="Images/Facebook Logo.png" class="icon2">Sign up with Facebook</button>
+</div>
+<img src="Images/AV-removebg-preview.png" class="bottom-logo">
 </div>
 
-</div>
+    
 
-
-
-
-
-</div>
-
-
-
-
-<!-- EMOTION SECTION -->
-
-<div class="container">
-
-<h2>Choose Your Emotion</h2>
-
-
-<div class="cards">
-<div class="card happy" onclick="openPlayer('happy')">😊 Happy</div>
-
-<div class="card sad" onclick="openPlayer('sad')">😢 Sad</div>
-
-<div class="card relax" onclick="openPlayer('relax')">😌 Relax</div>
-
-<div class="card angry" onclick="openPlayer('angry')">😠 Angry</div>
-
-<div class="card love" onclick="openPlayer('love')">😍 Love</div>
-
-<div class="card energetic" onclick="openPlayer('energetic')">⚡ Energetic</div>
-
-<div class="card focus" onclick="openPlayer('focus')">📚 Focus</div>
-</div>
-
-</div>
-<div id="musicModal" class="music-modal">
-
-<div class="modal-box">
-
-<span class="close-btn" onclick="closePlayer()">✖</span>
-
-<h3>Select Platform</h3>
-
-<button onclick="playSpotify()">Spotify 🎧</button>
-<button onclick="playYouTube()">YouTube ▶️</button>
-
-<div id="playerFrame"></div>
-
-</div>
-
-</div>
-
-
-<script src="script.js"></script>
-
+<script src="login.js"></script>
 </body>
 </html>
