@@ -79,3 +79,6 @@ window.onclick = function(event) {
         closePlayer();
     }
 };
+function closeAd() {
+    document.getElementById("popupAd").style.display = "none";
+}
